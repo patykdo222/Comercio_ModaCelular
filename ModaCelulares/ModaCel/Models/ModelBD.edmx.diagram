@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c1508b68bffa444dbac719f26b484d2d" Name="Diagram1">
+        <EntityTypeShape EntityType="BDCelularesModel.Cliente" Width="1.5" PointX="5.875" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCelularesModel.Pedido" Width="1.5" PointX="3.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCelularesModel.PedidoDetalle" Width="1.5" PointX="5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCelularesModel.Producto" Width="1.5" PointX="1.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCelularesModel.ProductoImagen" Width="1.5" PointX="0.5" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="BDCelularesModel.FK__Pedido__ClienteI__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCelularesModel.FK__PedidoDet__Pedid__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCelularesModel.FK__PedidoDet__Produ__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCelularesModel.FK__ProductoI__Produ__286302EC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

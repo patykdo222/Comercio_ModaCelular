@@ -1,0 +1,110 @@
+﻿@model List<ModaCel.Models.Producto>
+
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Buscador</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Buscar Productos</h2>
+                    <form action="@Url.Action("Buscar","Home")">
+                        <input  name="id" type="text" placeholder="Buscar productos...">
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+               
+                <h2 class="sidebar-title">Productos</h2>
+                @ViewBag.clave
+                @foreach (var item in Model)
+                {
+                    <div class="single-sidebar">
+                         <div class="thubmnail-recent">
+                            <img src="~/img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="">@item.Denominacion</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>@item.Precio</ins>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+
+
+                          </div>
+
+            <div class="col-md-8">
+
+<h2 class="sidebar-title">Descripcion de celulares</h2>
+                @ViewBag.clave
+@foreach (var item in Model)
+{
+                <div class="product-content-right">
+                    <div class="product-breadcroumb">
+                         </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="product-images">
+                                <div class="product-main-img">
+                                    <img src="~/img/product-2.jpg" alt="">
+                                </div>
+
+                                <div class="product-gallery">
+                                    <img src="~/img/product-thumb-1.jpg" alt="">
+                                    <img src="~/img/product-thumb-2.jpg" alt="">
+                                    <img src="~/img/product-thumb-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="product-inner">
+                                <h2 class="product-name">@item.Denominacion</h2>
+                                <div class="product-inner-price">
+                                    <ins>$@item.Precio</ins> 
+                                </div>
+
+                                <form action="" class="cart">
+                                    <div class="quantity">
+                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    </div>
+                                    <button class="add_to_cart_button" type="submit">Agregar al carrito</button>
+                                </form>
+
+                                   <div role="tabpanel">
+                                    <ul class="product-tab" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                            <h2>Descripcion del producto</h2>
+                                            <p>@item.Descripcion</p>
+
+                                            </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="profile">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>}
+            </div>
+        </div>
+    </div>
+</div>
